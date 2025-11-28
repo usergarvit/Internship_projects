@@ -1,14 +1,13 @@
-# streamlit_movie_booking.py
 import streamlit as st
 
-# Movie database
+
 movies = {
     "Avengers: Endgame": 10,
     "Inception": 8,
     "Titanic": 5
 }
 
-# Store bookings in session state
+
 if "bookings" not in st.session_state:
     st.session_state.bookings = []
 
@@ -41,3 +40,4 @@ if st.session_state.bookings:
         st.write(f" Movie: {b['movie']} | Tickets: {b['tickets']} | Ticket ID: {b['ticket_id']}")
 else:
     st.write("No bookings yet.")
+
